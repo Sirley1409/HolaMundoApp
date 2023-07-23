@@ -87,15 +87,21 @@ namespace App.ViewModels
         {
             if (ValidateFiels())
             {
-                await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                if (Username == "sflorez" && Password == "1234")
+                {
+                    WelcomeMessage = "Inicio de sesión exitoso, " + "¡Bienvenido! " + Username + "!";
+                    MessageColor = Color.Green;
+                    await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                }
+                else
+                {
+                    ShowMessage = true;
+                    MessageColor = Color.Red;
+                    WelcomeMessage = "Usuario o contraseña incorrectos";
+                }
             }
-            else
-            {
-                ShowMessage = true;
-                MessageColor = Color.Red;
-                WelcomeMessage = "Usuario Invalido";
-            }
-
+ 
         }
 
         private bool ValidateFiels()
