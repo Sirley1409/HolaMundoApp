@@ -8,6 +8,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <Color x:Key="Primary">#674ea7</Color>
+            <Style x:Key="Botones" TargetType="Button">
+                <Setter Property="BorderRadius" Value="25"></Setter></Style>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">

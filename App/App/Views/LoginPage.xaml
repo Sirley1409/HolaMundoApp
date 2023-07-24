@@ -12,11 +12,12 @@
     </ContentPage.BindingContext >
             <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
-            
+            <Image Source="seguridad.png"></Image>
+            <!--<Image Source="seguridad.png" Width="200" Height="150" ></Image>-->
             <Entry Text="{Binding Username}" Placeholder="User" Margin="10"/>
             <Entry Text="{Binding Password}" Placeholder="Password" IsPassword="True" Margin="10"/>
             
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}"/>
+            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" Style="{StaticResource Botones}"/>
 
             <Label Text="{Binding WelcomeMessage}" FontSize="Subtitle" TextColor="{Binding MessageColor}" HorizontalOptions="Center" Margin="0,30,0,0" IsVisible="{Binding IsLoggerIn}"/>
         </StackLayout>
