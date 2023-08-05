@@ -1,4 +1,5 @@
-﻿using App.Views;
+﻿using App.Services;
+using App.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -85,6 +86,8 @@ namespace App.ViewModels
 
         private async void OnLoginClicked(object obj)
         {
+            //await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
+
             if (ValidateFiels())
             {
                 //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
@@ -92,7 +95,7 @@ namespace App.ViewModels
                 {
                     WelcomeMessage = "Inicio de sesión exitoso, " + "¡Bienvenido! " + Username + "!";
                     MessageColor = Color.Green;
-                    await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                    await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
                 }
                 else
                 {
@@ -101,7 +104,7 @@ namespace App.ViewModels
                     WelcomeMessage = "Usuario o contraseña incorrectos";
                 }
             }
- 
+
         }
 
         private bool ValidateFiels()

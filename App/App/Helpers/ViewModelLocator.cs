@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Reflection;
 using Xamarin.Forms;
 
-namespace App.Utilities
+namespace App.Helpers
 {
     public class ViewModelLocator
     {

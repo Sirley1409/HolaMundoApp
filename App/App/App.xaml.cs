@@ -12,6 +12,7 @@ namespace App
         {
             InitializeComponent();
 
+            Startup.Initialize();
             MainPage = new AppShell();
         }
 

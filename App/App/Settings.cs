@@ -4,7 +4,9 @@ using System.Text;
 
 namespace App
 {
-    internal class Settings
+    public static class Settings
     {
+        public const string ApiBaseUri = "http://localhost:7138/api";
     }
+
 }

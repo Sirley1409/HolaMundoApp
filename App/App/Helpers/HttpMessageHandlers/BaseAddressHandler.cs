@@ -1,10 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace App.Helpers.HttpMessageHandlers
 {
-    internal class BaseAddressHandler
+    public class BaseAddressHandler : DelegatingHandler
     {
+        public BaseAddressHandler()
+        {
+        }
+
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
+            var response = await base.SendAsync(request, cancellationToken);
+            return response;
+        }
     }
 }

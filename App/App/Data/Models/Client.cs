@@ -4,7 +4,10 @@ using System.Text;
 
 namespace App.Data.Models
 {
-    internal class Client
+    public class Client
     {
+        public long Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public string Dna { get; set; } = string.Empty;
     }
 }
