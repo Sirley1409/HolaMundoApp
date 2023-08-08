@@ -90,7 +90,7 @@ namespace App.ViewModels
 
             if (ValidateFiels())
             {
-                //await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
+                //await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
                 if (Username == "sflorez" && Password == "1234")
                 {
                     WelcomeMessage = "Inicio de sesión exitoso, " + "¡Bienvenido! " + Username + "!";

@@ -2,18 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"           
              xmlns:local="clr-namespace:App;assembly=App"
              xmlns:viewModels="clr-namespace:App.ViewModels"
-             xmlns:helpers ="clr-namespace:App.Helpers"             
-             helpers:ViewModelLocator.AutoWireViewModel ="True"
              x:DataType="viewModels:LoginViewModel"
              mc:Ignorable="d"
              x:Class="App.Views.LoginPage"
              Shell.NavBarIsVisible="False">
-<!--<ContentPage.BindingContext>
+    <ContentPage.BindingContext>
         <viewModels:LoginViewModel/>
-    </ContentPage.BindingContext >-->
+    </ContentPage.BindingContext >
     <ContentPage.Content>
         <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
             <!--<Image Source="seguridad.png" WidthRequest="200" HeightRequest="200"></Image>-->

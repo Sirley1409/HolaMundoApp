@@ -1,19 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewModels ="clr-namespace:App.ViewModels"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:viewModels ="clr-namespace:App.ViewModels" 
              x:DataType="viewModels:ClientsViewModel"
-             xmlns:helpers ="clr-namespace:App.Helpers"
-             xmlns:models ="clr-namespace:App.Data.Models"             
-             helpers:ViewModelLocator.AutoWireViewModel ="True"
-             x:Class="App.Views.ClientsPage">
+             xmlns:models="clr-namespace:App.Data.Models"
+             xmlns:utility="clr-namespace:App.Helpers" 
+             utility:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"             
+             x:Class="App.Views.ClientsPage"
+             Padding="10">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="ClientOneToFiveTemplate" x:DataType="models:Client">
+                <StackLayout>
+                    <Frame CornerRadius="15"
+                           BackgroundColor="AliceBlue">
+                        <Grid ColumnDefinitions="*,*">
+                            <Label Text="{Binding Name}" TextColor="Black"/>
+                            <Label Grid.Column="1" Text="{Binding Dna}" TextColor="Black"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+                
+            </DataTemplate>
+            <DataTemplate x:Key="ClientSixToTenTemplate" x:DataType="models:Client">
+                <StackLayout>
+                    <Frame CornerRadius="15"
+                           BackgroundColor="LightCoral">
+                        <Grid ColumnDefinitions="*,*">
+                            <Label Text="{Binding Name}" TextColor="Black"/>
+                            <Label Grid.Column="1" Text="{Binding Dna}" TextColor="Black"/>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+
+            </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding AppearingCommand}"/>
     </ContentPage.Behaviors>
     <ContentPage.Content>
         <CollectionView ItemsSource="{Binding Clients}"
-                        EmptyView="No Data to Display">
+                        EmptyView="No Data to Display" x:DataType="viewModels:ClientsViewModel">
+            <CollectionView.Header>
+                <Grid ColumnDefinitions="*,*" x:DataType="models:Client">
+                    <Label Text="{Binding Name}" TextColor="Black"/>
+                    <Label Grid.Column="1" Text="{Binding Dna}" TextColor="Black"/>
+                </Grid>
+            </CollectionView.Header>
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:Client">
                     <StackLayout>
