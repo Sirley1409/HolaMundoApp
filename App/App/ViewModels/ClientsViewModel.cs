@@ -32,11 +32,22 @@ namespace App.ViewModels
 
         private async Task LoadData()
         {
-            var clients = await _clientService.GetClientsAsync();
-
-            if (clients.Count > 0) 
+            try
             {
-                Clients.ReplaceRange(clients);
+                IsBusy = true;
+                var clients = await _clientService.GetClientsAsync();
+                if (clients != null)
+                {
+                    Clients.ReplaceRange(clients);
+                }
+            }
+            catch (Exception ex)
+            {
+                var message = ex.Message;
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
     }

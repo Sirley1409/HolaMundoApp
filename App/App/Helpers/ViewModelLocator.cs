@@ -43,8 +43,8 @@ namespace App.Helpers
                     return;
                 }
 
-                //var viewModel = Startup.Resolve(viewModelType);
-                //view.BindingContext = viewModel;
+                var viewModel = Startup.Resolve(viewModelType);
+                view.BindingContext = viewModel;
             }
         }
     }
