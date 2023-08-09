@@ -1,4 +1,5 @@
-﻿using App.Services;
+﻿using App.Resx;
+using App.Services;
 using App.Views;
 using System;
 using System.Collections.Generic;
@@ -81,6 +82,7 @@ namespace App.ViewModels
 
         public LoginViewModel()
         {
+            
             LoginCommand = new Command(OnLoginClicked);
         }
 
@@ -90,27 +92,15 @@ namespace App.ViewModels
 
             if (ValidateFiels())
             {
-                //await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
-                if (Username == "sflorez" && Password == "1234")
-                {
-                    WelcomeMessage = "Inicio de sesión exitoso, " + "¡Bienvenido! " + Username + "!";
-                    MessageColor = Color.Green;
-                    await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
-                }
-                else
-                {
-                    //await Application.Current.MainPage.DisplayAlert(
-                    //    AppResources.LoginPageInvalidLoginTitle,
-                    //    LoginPagLoginPageInvalidLoginMessage,
-                    //    AppResources.OkText);
-
-                    ShowMessage = true;
-                    MessageColor = Color.Red;
-                    WelcomeMessage = "Usuario o contraseña incorrectos";
-                }
+                await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
             }
-
-        }
+            else
+            {
+                await Application.Current.MainPage.DisplayAlert(AppResources.LoginPageInvalidLoginTitle, 
+                    AppResources.LoginPageInvalidLoginMessage,
+                    AppResources.OkText);
+            }
+            }
 
         private bool ValidateFiels()
         {
@@ -123,5 +113,7 @@ namespace App.ViewModels
                 return false;
             }
         }
+
+        
     }
 }

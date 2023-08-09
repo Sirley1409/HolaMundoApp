@@ -21,7 +21,8 @@
                            BackgroundColor="AliceBlue">
                         <Grid ColumnDefinitions="*,*">
                             <Label Grid.Column="0" Text="{Binding Name}"/>
-                            <Label Grid.Column="1" Text="{Binding Dna}"/>
+                            <Label Grid.Column="1" Text="{Binding 
+                                }"/>
                         </Grid>
                     </Frame>
                     <BoxView BackgroundColor="Transparent" HeightRequest="5" />
@@ -68,7 +69,7 @@
                 <CollectionView.Header>
                     <Grid ColumnDefinitions="*,*">
                         <Label Text="Name" TextColor="Black"/>
-                        <Label Grid.Column="1" Text="DNA" TextColor="Black"/>
+                        <Label Grid.Column="1" Text="Dna" TextColor="Black"/>
                     </Grid>
                 </CollectionView.Header>
 
