@@ -99,6 +99,11 @@ namespace App.ViewModels
                 }
                 else
                 {
+                    //await Application.Current.MainPage.DisplayAlert(
+                    //    AppResources.LoginPageInvalidLoginTitle,
+                    //    LoginPagLoginPageInvalidLoginMessage,
+                    //    AppResources.OkText);
+
                     ShowMessage = true;
                     MessageColor = Color.Red;
                     WelcomeMessage = "Usuario o contraseña incorrectos";

@@ -9,7 +9,6 @@ namespace App.Controls
     public class ClientTemplateSelector : DataTemplateSelector
     {
         public DataTemplate DefaultTemplate { get; set; }
-
         public DataTemplate OneToFiveTemplate { get; set; }
         public DataTemplate SixToTenTemplate { get; set; }
 

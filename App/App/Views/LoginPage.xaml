@@ -5,6 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"           
              xmlns:local="clr-namespace:App;assembly=App"
              xmlns:viewModels="clr-namespace:App.ViewModels"
+             xmlns:utility="clr-namespace:App.Helpers"
+             utility:ViewModelLocator.AutoWireViewModel="True"
              x:DataType="viewModels:LoginViewModel"
              mc:Ignorable="d"
              x:Class="App.Views.LoginPage"
