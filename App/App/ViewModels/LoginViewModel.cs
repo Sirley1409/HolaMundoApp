@@ -9,92 +9,30 @@ using Xamarin.Forms;
 namespace App.ViewModels
 {
     public class LoginViewModel : BaseViewModel
+   
     {
-        private string _username;
-        private string _password;
-        private bool _showMessage;
-        private string _welcomeMessage;
-        private Color _messageColor;
+        private readonly IAccountService _accountService;
 
-        public string Username
+        public LoginViewModel(IAccountService accountService)
         {
-            get => _username;
-            set
-            {
-                if (_username != value)
-                {
-                    _username = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        public string Password
-        {
-            get => _password;
-            set
-            {
-                if (_password != value)
-                {
-                    _password = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        public Color MessageColor
-        {
-            get => _messageColor;
-            set
-            {
-                if (_messageColor != value)
-                {
-                    _messageColor = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        public bool ShowMessage
-        {
-            get => _showMessage;
-            set
-            {
-               if (_showMessage != value)
-                {
-                    _showMessage = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        public string WelcomeMessage
-        {
-            get => _welcomeMessage;
-            set
-            {
-                if (_welcomeMessage != value)
-                {
-                    _welcomeMessage = value;
-                    OnPropertyChanged();
-                }
-            }
-        }
-        public Command LoginCommand { get; }
-
-        public string UserName { get; set; }
-
-        public LoginViewModel()
-        {
-            
+            _accountService = accountService;
             LoginCommand = new Command(OnLoginClicked);
         }
+        private string _username;
+        private string _password;
+        public string UserName { get => _username; set => SetProperty(ref _username, value); }
+        public string Password { get => _password; set => SetProperty(ref _password, value); }
+        public Command LoginCommand { get; }
 
         private async void OnLoginClicked(object obj)
         {
-            if (ValidateFiels())
+            if (ValidateFiels() && await _accountService.LoginAsync(UserName, Password))
             {
-                await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");  
+                await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
             }
             else
             {
-                await Application.Current.MainPage.DisplayAlert(AppResources.LoginPageInvalidLoginTitle, 
+                await Application.Current.MainPage.DisplayAlert(AppResources.LoginPageInvalidLoginTitle,
                     AppResources.LoginPageInvalidLoginMessage,
                     AppResources.OkText);
             }
@@ -102,7 +40,7 @@ namespace App.ViewModels
 
         private bool ValidateFiels()
         {
-            if (!string.IsNullOrEmpty(Username) && !string.IsNullOrEmpty(Password))
+            if (!string.IsNullOrEmpty(UserName) && !string.IsNullOrEmpty(Password))
             {
                 return true;
             }
@@ -111,7 +49,5 @@ namespace App.ViewModels
                 return false;
             }
         }
-
-        
-    }
+    }    
 }

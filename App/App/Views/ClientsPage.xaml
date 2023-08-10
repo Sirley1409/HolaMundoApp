@@ -10,9 +10,6 @@
              x:DataType="viewModels:ClientsViewModel"             
              x:Class="App.Views.ClientsPage"
              Padding="10,10">
-    <ContentPage.Behaviors>
-        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding AppearingCommand}"/>
-    </ContentPage.Behaviors>
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="ClientDefaultTemplate" x:DataType="models:Client">
@@ -20,9 +17,8 @@
                     <Frame CornerRadius="15"
                            BackgroundColor="AliceBlue">
                         <Grid ColumnDefinitions="*,*">
-                            <Label Grid.Column="0" Text="{Binding Name}"/>
-                            <Label Grid.Column="1" Text="{Binding 
-                                }"/>
+                            <Label Text="{Binding Name}" TextColor="Black" />
+                            <Label Grid.Column="1" Text="{Binding Dna}" TextColor="Black"/>
                         </Grid>
                     </Frame>
                     <BoxView BackgroundColor="Transparent" HeightRequest="5" />
@@ -33,8 +29,8 @@
                     <Frame CornerRadius="15"
                            BackgroundColor="LightCoral">
                         <Grid ColumnDefinitions="*,*">
-                            <Label Grid.Column="0" Text="{Binding Name}"/>
-                            <Label Grid.Column="1" Text="{Binding Dna}"/>
+                            <Label Text="{Binding Name}" TextColor="Black"/>
+                            <Label Grid.Column="1" Text="{Binding Dna}" TextColor="Black"/>
                         </Grid>
                     </Frame>
                     <BoxView BackgroundColor="Transparent" HeightRequest="5" />
@@ -47,8 +43,8 @@
                     <Frame CornerRadius="15"
                        BackgroundColor="LightGreen">
                         <Grid ColumnDefinitions="*,*">
-                            <Label Grid.Column="0" Text="{Binding Name}"/>
-                            <Label Grid.Column="1" Text="{Binding Dna}"/>
+                            <Label Text="{Binding Name}" TextColor="Black"/>
+                            <Label Grid.Column="1" Text="{Binding Dna}" TextColor="Black"/>
                         </Grid>
                     </Frame>
                     <BoxView BackgroundColor="Transparent" HeightRequest="5" />
@@ -61,6 +57,9 @@
                 SixToTenTemplate="{StaticResource ClientSixToTenTemplate}"/>
         </ResourceDictionary>
     </ContentPage.Resources>
+    <ContentPage.Behaviors>
+        <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding AppearingCommand}"/>
+    </ContentPage.Behaviors>
     <ContentPage.Content>
         <StackLayout>
             <CollectionView ItemsSource="{Binding Clients}"

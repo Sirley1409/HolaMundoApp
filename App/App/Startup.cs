@@ -9,6 +9,7 @@ using Refit;
 using System;
 using System.Linq;
 using Xamarin.Forms.Internals;
+using App.Data.Api;
 
 namespace App
 {
@@ -35,6 +36,10 @@ namespace App
             }));
 
             serviceCollection.AddRefitClient<IClientApi>(refitSettings)
+                .ConfigureHttpClient(c => c.BaseAddress = new Uri(Settings.ApiBaseUri))
+                .AddHttpMessageHandler<BaseAddressHandler>();
+
+            serviceCollection.AddRefitClient<IAccountApi>(refitSettings)
                 .ConfigureHttpClient(c => c.BaseAddress = new Uri(Settings.ApiBaseUri))
                 .AddHttpMessageHandler<BaseAddressHandler>();
 
