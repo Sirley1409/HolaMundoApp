@@ -24,11 +24,13 @@ namespace App.ViewModels
         public string Password { get => _password; set => SetProperty(ref _password, value); }
         public Command LoginCommand { get; }
 
+
         private async void OnLoginClicked(object obj)
         {
             if (ValidateFiels() && await _accountService.LoginAsync(UserName, Password))
             {
-                await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
+                //await Shell.Current.GoToAsync($"//{nameof(ClientsPage)}");
+                await Shell.Current.GoToAsync($"//{nameof(AboutPage)}"); 
             }
             else
             {

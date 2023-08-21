@@ -30,6 +30,10 @@
             </DataTemplate>
             <DataTemplate x:Key="ClientOneToFiveTemplate" x:DataType="models:Client">
                 <StackLayout>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:ClientsViewModel}}, Path=ClientTappedCommand}"
+                                          CommandParameter="{Binding .}" />
+                    </StackLayout.GestureRecognizers>
                     <Frame CornerRadius="15"
                            BackgroundColor="LightCoral">
                         <Grid ColumnDefinitions="*,*">
@@ -44,6 +48,10 @@
             <DataTemplate x:DataType="models:Client"
                 x:Key="ClientSixToTenTemplate">
                 <StackLayout>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:ClientsViewModel}}, Path=ClientTappedCommand}"
+                                          CommandParameter="{Binding .}" />
+                    </StackLayout.GestureRecognizers>
                     <Frame CornerRadius="15"
                        BackgroundColor="LightGreen">
                         <Grid ColumnDefinitions="*,*">

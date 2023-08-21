@@ -38,6 +38,6 @@ namespace App.ViewModels
         {
             get { return title; }
             set { SetProperty(ref title, value); }
-        }       
+        }
     }
 }

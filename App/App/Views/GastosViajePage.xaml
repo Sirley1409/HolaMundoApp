@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Views.GastosViajePage">
+    <ContentPage.Content>
+        <StackLayout x:Name="StackLayout1" Padding="10">
+            <Label Text="Gastos De Viaje"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   FontSize="30" FontFamily="MontserratItalic" FontAttributes="Bold" 
+                   TextColor="Purple"
+                   Margin="0, 0, 0, 30"/>
+            <Grid  ColumnDefinitions="35*,75*" 
+                   RowDefinitions="20*,20*,20*,20*,50*,100*" 
+                   RowSpacing ="0"
+                   ColumnSpacing="0">
+                <Label Text="Clasificación"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start"
+                   FontSize="20" FontFamily="MontserratItalic" FontAttributes="Bold"
+                   Margin="0, 0, 0, 0"
+                   TextColor="Purple"
+                   Grid.Column="0"
+                   Grid.Row ="0"
+                       />
+                <Picker Title="Selección" Margin="0, 0, 0, 0" 
+                        FontSize="20"
+                        FontFamily="MontserratItalic"
+                        HorizontalOptions="Fill" 
+                        Grid.Column="1" 
+                        Grid.Row ="0">
+                    <Picker.Items>
+                            <x:String>Tiquetes o Pasajes</x:String>
+                            <x:String>Hospedaje</x:String>
+                            <x:String>Alimentación</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Fecha"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Start"
+                       FontSize="20" FontFamily="MontserratItalic" FontAttributes="Bold"
+                       Margin="0, 0, 0, 0"
+                       TextColor="Purple"
+                       Grid.Column="0"
+                       Grid.Row ="1"
+                       />
+                <DatePicker x:Name="startDatePicker"
+                        Format="D"
+                        Margin="0, 0, 0, 0"
+                        MinimumDate="01/01/2018"
+                        MaximumDate="12/31/2099"
+                        HorizontalOptions="Fill"
+                        Grid.Column="1"
+                        Grid.Row ="1"/>
+
+                <Label Text="Valor"
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Start"
+                       FontSize="20" FontFamily="MontserratItalic" FontAttributes="Bold"
+                       Margin="0, 0, 0, 0"
+                       TextColor="Purple"
+                       Grid.Column="0"
+                       Grid.Row ="2"/>
+
+                <Entry 
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Fill"
+                   FontSize="20" FontFamily="MontserratItalic"
+                   Margin="0, 0, 0, 0"
+                   TextColor="Black"
+                   Grid.Column="1"
+                   Grid.Row ="2"
+                   Placeholder="0"
+                    />
+
+                <Label Text="Detalle"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Start"
+                   FontSize="20" FontFamily="MontserratItalic" FontAttributes="Bold"
+                   Margin="0, 0, 0, 0"
+                   TextColor="Purple"
+                   Grid.Column="0"
+                   Grid.Row ="4"/>
+
+                <Editor
+                   VerticalOptions="Fill" 
+                   HorizontalOptions="Fill"
+                   FontSize="20" FontFamily="MontserratItalic"
+                   Margin="0, 0, 0, 0"
+                   TextColor="Black"
+                   Grid.Column="1"
+                   Grid.Row ="4"
+                   MaxLength="255"
+                   Placeholder="Detalle el Gasto"/>
+            </Grid>
+            <Button VerticalOptions="Center" 
+                    Text="Guardar" Command="{Binding LoginCommand}"
+                    Style="{StaticResource Botones}"
+                    FontFamily="MontserratItalic"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

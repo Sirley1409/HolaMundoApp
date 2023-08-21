@@ -7,13 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Fonts\18thCentury.ttf" />
+    <None Remove="Resources\Fonts\LuisCandara.ttf" />
+    <None Remove="Resources\Fonts\MontserratItalic.ttf" />
     <None Remove="Resources\Images\flores1.jpg" />
     <None Remove="Resources\Images\seguridad.png" />
+    <None Remove="Resources\Images\travelinicio1.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Images\flores1.jpg" />
-    <EmbeddedResource Include="Resources\Images\seguridad.png" />
+    <EmbeddedResource Include="Resources\Fonts\LuisCandara.ttf" />
+    <EmbeddedResource Include="Resources\Fonts\MontserratItalic.ttf" />
+    <EmbeddedResource Include="Resources\Images\travelinicio1.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,5 +50,12 @@
     <EmbeddedResource Update="Views\ClientsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\GastosViajePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\netstandard2.0\ref\" />
   </ItemGroup>
 </Project>
