@@ -137,6 +137,7 @@
     <AndroidResource Include="Resources\drawable\travelinicio1.png" />
     <AndroidResource Include="Resources\drawable\travelgastos.png" />
     <AndroidResource Include="Resources\drawable\travel1.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\travel1.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />

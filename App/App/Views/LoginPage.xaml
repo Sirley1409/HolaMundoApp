@@ -17,7 +17,7 @@
             <Image Source="{local:ImageResource App.Resources.Images.travelinicio1.png}" WidthRequest="150" HeightRequest="150" />
             <Entry Text="{Binding UserName}" Placeholder="{Static resx:AppResources.LoginPageUserNameText}" TextColor="Black" Margin="10"/>
             <Entry Text="{Binding Password}" Placeholder="{Static resx:AppResources.LoginPagePasswordText}" IsPassword="True"  TextColor="Black" Margin="10"/>
-            <Button VerticalOptions="Center" Text="Login" Command="{Binding LoginCommand}" Style="{StaticResource Botones}"/>
+            <Button VerticalOptions="Center" Text="Ingresar" Command="{Binding LoginCommand}" Style="{StaticResource Botones}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

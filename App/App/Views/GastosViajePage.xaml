@@ -10,7 +10,7 @@
                    FontSize="30" FontFamily="MontserratItalic" FontAttributes="Bold" 
                    TextColor="Purple"
                    Margin="0, 0, 0, 30"/>
-            <Grid  ColumnDefinitions="35*,75*" 
+            <Grid  ColumnDefinitions="40*,75*" 
                    RowDefinitions="20*,20*,20*,20*,50*,100*" 
                    RowSpacing ="0"
                    ColumnSpacing="0">
@@ -45,15 +45,16 @@
                        Grid.Column="0"
                        Grid.Row ="1"
                        />
-                <DatePicker x:Name="startDatePicker"
-                        Format="D"
-                        Margin="0, 0, 0, 0"
-                        MinimumDate="01/01/2018"
-                        MaximumDate="12/31/2099"
-                        HorizontalOptions="Fill"
-                        Grid.Column="1"
-                        Grid.Row ="1"/>
-
+                <Entry 
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Fill"
+                       FontSize="20" FontFamily="MontserratItalic"
+                       Margin="0, 0, 0, 0"
+                       TextColor="Black"
+                       Grid.Column="1"
+                       Grid.Row ="1"
+                       Placeholder="mm/dd/yyyy"
+                        />
                 <Label Text="Valor"
                        VerticalOptions="Center" 
                        HorizontalOptions="Start"
@@ -72,7 +73,7 @@
                    Grid.Column="1"
                    Grid.Row ="2"
                    Placeholder="0"
-                    />
+                   TextChanged="OnEntryTextChanged"/>
 
                 <Label Text="Detalle"
                    VerticalOptions="Center" 

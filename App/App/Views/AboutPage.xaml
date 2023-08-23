@@ -29,8 +29,8 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Bienvenido" FontSize="Title" TextColor="Purple" FontAttributes="Bold"/>
-                <Label Text="Nuestra app de gastos de viaje! Estamos aquí para ayudarte a llevar un registro fácil y organizado de tus gastos mientras estás de viaje. ¡Que tengas un excelente viaje! " FontSize="16" Padding="0,0,0,0" TextColor="Purple"/>
+                <Label Text="Bienvenido" FontFamily="MontserratItalic" FontSize="Title" TextColor="Purple" FontAttributes="Bold"/>
+                <Label Text="Nuestra app de gastos de viaje! Estamos aquí para ayudarte a llevar un registro fácil y organizado de tus gastos mientras estás de viaje. ¡Que tengas un excelente viaje! " FontFamily="MontserratItalic" FontSize="16" Padding="0,0,0,0" TextColor="Purple"/>
                 <Label FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
                         <FormattedString>

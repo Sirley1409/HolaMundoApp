@@ -12,6 +12,7 @@
                 <Setter Property="BorderRadius" Value="25"></Setter></Style>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="FontFamily" Value="MontserratItalic"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
