@@ -120,9 +120,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\seguridad.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash.png" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +135,8 @@
     <AndroidResource Include="Resources\drawable\travelgastos.png" />
     <AndroidResource Include="Resources\drawable\travel1.png" />
     <AndroidResource Include="Resources\mipmap-hdpi\travel1.png" />
+    <AndroidResource Include="Resources\drawable\travelmonedas.png" />
+    <AndroidResource Include="Resources\drawable\travelgrafica.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />

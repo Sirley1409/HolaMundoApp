@@ -27616,40 +27616,43 @@ namespace App.Droid
 			public const int preference_list_divider_material = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int seguridad = 2131165348;
+			public const int splash = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int splash = 2131165349;
+			public const int test_custom_background = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int test_custom_background = 2131165350;
+			public const int test_level_drawable = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int test_level_drawable = 2131165351;
+			public const int tooltip_frame_dark = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int tooltip_frame_dark = 2131165352;
+			public const int tooltip_frame_light = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int tooltip_frame_light = 2131165353;
+			public const int travel = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int travel = 2131165354;
+			public const int travel1 = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int travel1 = 2131165355;
+			public const int travelgastos = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int travelgastos = 2131165356;
+			public const int travelgrafica = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
 			public const int travelinicio1 = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int travelsalir = 2131165358;
+			public const int travelmonedas = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int xamarin_logo = 2131165359;
+			public const int travelsalir = 2131165359;
+			
+			// aapt resource value: 0x7F0700B0
+			public const int xamarin_logo = 2131165360;
 			
 			static Drawable()
 			{

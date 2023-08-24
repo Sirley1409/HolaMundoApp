@@ -11,7 +11,7 @@
                    TextColor="Purple"
                    Margin="0, 0, 0, 30"/>
             <Grid  ColumnDefinitions="40*,75*" 
-                   RowDefinitions="20*,20*,20*,20*,50*,100*" 
+                   RowDefinitions="20*,20*,20*,20*" 
                    RowSpacing ="0"
                    ColumnSpacing="0">
                 <Label Text="Clasificación"
@@ -45,15 +45,6 @@
                        Grid.Column="0"
                        Grid.Row ="1"
                        />
-                <Entry 
-                       VerticalOptions="Center" 
-                       HorizontalOptions="Fill"
-                       FontSize="20" FontFamily="MontserratItalic"
-                       Margin="0, 0, 0, 0"
-                       TextColor="Black"
-                       Grid.Column="1"
-                       Grid.Row ="1"
-                        />
                 <DatePicker Date="{Binding Fecha}" 
                             Margin="1" 
                             TextColor="Black" 
@@ -90,7 +81,7 @@
                    Margin="0, 0, 0, 0"
                    TextColor="Purple"
                    Grid.Column="0"
-                   Grid.Row ="4"/>
+                   Grid.Row ="3"/>
 
                 <Editor
                    VerticalOptions="Fill" 
@@ -99,7 +90,7 @@
                    Margin="0, 0, 0, 0"
                    TextColor="Black"
                    Grid.Column="1"
-                   Grid.Row ="4"
+                   Grid.Row ="3"
                    MaxLength="255"
                    Placeholder="Detalle el Gasto"/>
             </Grid>

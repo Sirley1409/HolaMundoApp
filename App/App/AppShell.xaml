@@ -98,16 +98,16 @@
     <!--<FlyoutItem Title="Clients" Icon="icon_about.png">
         <ShellContent Route="ClientsPage" ContentTemplate="{DataTemplate local:ClientsPage}" />
     </FlyoutItem>-->
-    
-    <FlyoutItem Title="Presupuesto de Viaje" Icon="travelgastos.png" >
+
+    <FlyoutItem Title="Presupuesto de Viaje" Icon="travelmonedas.png" >
         <ShellContent Route="PresupuestoViajePage" ContentTemplate="{DataTemplate local:PresupuestoViajePage}"/>
     </FlyoutItem>
 
     <FlyoutItem Title="Gastos de Viaje" Icon="travelgastos.png" >
         <ShellContent Route="GastosViajePage" ContentTemplate="{DataTemplate local:GastosViajePage}"/>
     </FlyoutItem>
-    
-    <FlyoutItem Title="Grafica" Icon="travelgastos.png" >
+
+    <FlyoutItem Title="Gráfica" Icon="travelgrafica.png" >
         <ShellContent Route="GraficasPage" ContentTemplate="{DataTemplate local:GraficasPage}"/>
     </FlyoutItem>
 
