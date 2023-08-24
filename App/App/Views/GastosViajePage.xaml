@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodels="clr-namespace:App.ViewModels" x:DataType="viewmodels:GastosViajeViewModel"
              x:Class="App.Views.GastosViajePage">
     <ContentPage.Content>
         <StackLayout x:Name="StackLayout1" Padding="10">
@@ -53,8 +53,16 @@
                        TextColor="Black"
                        Grid.Column="1"
                        Grid.Row ="1"
-                       Placeholder="mm/dd/yyyy"
                         />
+                <DatePicker Date="{Binding Fecha}" 
+                            Margin="1" 
+                            TextColor="Black" 
+                            FontSize="20" FontFamily="MontserratItalic"
+                            MinimumDate="08/01/2023"
+                            Grid.Column="1"
+                            Grid.Row ="1"
+                            />
+                
                 <Label Text="Valor"
                        VerticalOptions="Center" 
                        HorizontalOptions="Start"
