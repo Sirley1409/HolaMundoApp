@@ -15,46 +15,12 @@
             <DataTemplate x:Key="GastosViajeDefaultTemplate" x:DataType="models:GastosViaje">
                 <StackLayout>
                     <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:PresupuestoViajeViewModel}}, Path=GastosTappedCommand}"                                      CommandParameter="{Binding .}" />
+                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:PresupuestoViajeViewModel}}, Path=GastosTappedCommand}" CommandParameter="{Binding .}" />
                     </StackLayout.GestureRecognizers>
                     <Frame CornerRadius="15"
                        BackgroundColor="AliceBlue">
                         <Grid ColumnDefinitions="*,*">
                             <Label Text="{Binding DetalleGasto}" TextColor="Black" />
-                            <Label Grid.Column="1" Text="{Binding Valor}" TextColor="Black"/>
-                        </Grid>
-                    </Frame>
-                    <BoxView BackgroundColor="Transparent" HeightRequest="5" />
-                </StackLayout>
-            </DataTemplate>
-            <DataTemplate x:Key="ClientOneToFiveTemplate" x:DataType="models:GastosViaje">
-                <StackLayout>
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:PresupuestoViajeViewModel}}, Path=GastosTappedCommand}"
-                                      CommandParameter="{Binding .}" />
-                    </StackLayout.GestureRecognizers>
-                    <Frame CornerRadius="15"
-                       BackgroundColor="LightCoral">
-                        <Grid ColumnDefinitions="*,*">
-                            <Label Text="{Binding DetalleGasto}" TextColor="Black"/>
-                            <Label Grid.Column="1" Text="{Binding Valor}" TextColor="Black"/>
-                        </Grid>
-                    </Frame>
-                    <BoxView BackgroundColor="Transparent" HeightRequest="5" />
-                </StackLayout>
-            </DataTemplate>
-
-            <DataTemplate x:DataType="models:GastosViaje"
-            x:Key="ClientSixToTenTemplate">
-                <StackLayout>
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:PresupuestoViajeViewModel}}, Path=GastosTappedCommand}"
-                                      CommandParameter="{Binding .}" />
-                    </StackLayout.GestureRecognizers>
-                    <Frame CornerRadius="15"
-                   BackgroundColor="LightGreen">
-                        <Grid ColumnDefinitions="*,*">
-                            <Label Text="{Binding DetalleGasto}" TextColor="Black"/>
                             <Label Grid.Column="1" Text="{Binding Valor}" TextColor="Black"/>
                         </Grid>
                     </Frame>
