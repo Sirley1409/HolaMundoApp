@@ -13,6 +13,6 @@ namespace App.Data.Api
     {
         [Post("/GastosViajes")]
 
-        Task<List<GastosViaje>> PostGastosViajeAsync(GastoDto gastoDto);
+        Task<GastosViajePost> PostGastosViajeAsync(GastoDto gastoDto);
     }
 }

@@ -104,8 +104,7 @@ namespace App.ViewModels
                 ClasificacionGastosId = IdGastos,
                 Fecha = Fecha,
                 Valor = Valor, //int.Parse(Valor.Replace('$','\0').Replace('.', '\0')),
-                DetalleGasto = DetalleGasto
-            };
+                DetalleGasto = DetalleGasto            };
 
              _IngresarGastosService.PostGastosViajeAsync(gastoDto);
             //GastoDto gastoDto = new GastoDto()

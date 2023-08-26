@@ -49,10 +49,10 @@
                         </Grid>
                     </CollectionView.Header>
                 </CollectionView>
-                <!--<Button VerticalOptions="Center" 
+                <Button VerticalOptions="Center" 
                          Text="Eliminar" Command="{Binding LoginCommand}"
                          Style="{StaticResource Botones}"
-                />-->
+                />
                 <!--<Label Text="Presupuesto"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center"

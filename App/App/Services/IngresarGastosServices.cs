@@ -27,11 +27,11 @@ namespace App.Services
                 var response = await _IngresarGastosApi.PostGastosViajeAsync(gastoDto);
                 if (response == null)
                 {
-                    await Application.Current.MainPage.DisplayAlert("Mensaje", "Gastos guardados con éxito", "Aceptar");
+                    await Application.Current.MainPage.DisplayAlert("Error", "No se pudo guardar los gastos", "Aceptar");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("Error", "No se pudo guardar los gastos", "Aceptar");
+                    await Application.Current.MainPage.DisplayAlert("Mensaje", "Gastos guardados con éxito", "Aceptar");
                 }
             }
             catch (Exception ex)
