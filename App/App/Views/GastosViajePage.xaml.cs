@@ -15,16 +15,16 @@ namespace App.Views
             {
                 InitializeComponent();
             }
-        private void OnEntryTextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(e.NewTextValue))
-            {
-                if (decimal.TryParse(e.NewTextValue, NumberStyles.Currency, CultureInfo.CurrentCulture, out decimal value))
-                {
-                    string formattedValue = value.ToString("C0", CultureInfo.CurrentCulture);
-                    ((Entry)sender).Text = formattedValue;
-                }
-            }
-        }
+        //private void OnEntryTextChanged(object sender, TextChangedEventArgs e)
+        //{
+        //    if (!string.IsNullOrWhiteSpace(e.NewTextValue))
+        //    {
+        //        if (decimal.TryParse(e.NewTextValue, NumberStyles.Currency, CultureInfo.CurrentCulture, out decimal value))
+        //        {
+        //            string formattedValue = value.ToString("C0", CultureInfo.CurrentCulture);
+        //            ((Entry)sender).Text = formattedValue;
+        //        }
+        //    }
+        //}
     }
 }

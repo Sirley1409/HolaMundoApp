@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace App.Services
 {
@@ -36,6 +37,7 @@ namespace App.Services
 
                     if (user != null)
                     {
+                        //Preferences.Set("UserId", user.Id);
                         _appUserSettingService.UserName = user.UserName;
                         _appUserSettingService.UserToken = user.Token;
                         return true;

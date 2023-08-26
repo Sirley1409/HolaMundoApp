@@ -17,6 +17,7 @@ namespace App.ViewModels
 
         public PresupuestoViajeViewModel(IVerGastosService VerGastosService)
         {
+            Title = "Presupuesto";
             AppearingCommand = new AsyncCommand(async () => await OnAppearingAsync());
             GastosTappedCommand = new AsyncCommand<GastosViaje>(OnGastosTapped);
             Title = "Gastos";
