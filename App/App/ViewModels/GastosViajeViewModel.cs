@@ -24,6 +24,8 @@ namespace App.ViewModels
         private string _clasificaciongastosId;
         private GastosViaje _gastosviaje;
         private readonly IIngresarGastosServices _IngresarGastosService;
+
+        public FontAttributes TitleFontAttributes { get; }
         public ICommand GuardarCommand { get; set; }
         public ICommand AppearingCommand { get; set; }
         public string ClasificacionGastosId { get => _clasificaciongastosId; set => SetProperty(ref _clasificaciongastosId, value); }
@@ -37,50 +39,17 @@ namespace App.ViewModels
         public GastosViajeViewModel(IIngresarGastosServices ingresarGastosServices)
         {
             Title = "Gastos de Viaje";
+            TitleFontAttributes = FontAttributes.Bold;
             GuardarCommand = new AsyncCommand(async () => GuardarGastos());
             AppearingCommand = new AsyncCommand(async () => await OnAppearingAsync());
             _IngresarGastosService = ingresarGastosServices;
 
 
         }
-        //public async Task PostGastosViaje(GastosViaje gastosViaje)
-        //{
-        //    GastoDto gastoDto = new GastoDto()
-        //    {
-        //        ClasificacionGastosId = gastosViaje.ClasificacionGastosId,
-        //        DetalleGasto = gastosViaje.DetalleGasto,
-        //        Fecha = gastosViaje.Fecha,
-        //        UserId = gastosViaje.UserId,
-        //        Valor = gastosViaje.Valor
-
-        //    };
-        //    await _IngresarGastosService.PostGastosViajeAsync(gastoDto);
-        //}
         private async Task OnAppearingAsync()
         {
             //await LoadData();
         }
-
-        //private async Task LoadData()
-        //{
-        //    try
-        //    {
-        //        IsBusy = true;
-        //        var gastos = await _IngresarGastosService.PostGastosViajeAsync(GastoDto gastoDto);
-        //        if (gastos != null)
-        //        {
-        //            Gastos.ReplaceRange(gastos);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        var message = ex.Message;
-        //    }
-        //    finally
-        //    {
-        //        IsBusy = false;
-        //    }
-        //}
 
         private void GuardarGastos()
         {
@@ -107,17 +76,6 @@ namespace App.ViewModels
                 DetalleGasto = DetalleGasto            };
 
              _IngresarGastosService.PostGastosViajeAsync(gastoDto);
-            //GastoDto gastoDto = new GastoDto()
-            //{
-            //    ClasificacionGastosId = gastosViaje.ClasificacionGastosId,
-            //    DetalleGasto = gastosViaje.DetalleGasto,
-            //    Fecha = gastosViaje.Fecha,
-            //    UserId = gastosViaje.UserId,
-            //    Valor = gastosViaje.Valor
-
-            //};
-            //await _IngresarGastosService.PostGastosViajeAsync(gastoDto);
-            //PostGastosViajeAsync(gastoDto);
         }
     }
 }

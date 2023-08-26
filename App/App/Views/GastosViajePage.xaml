@@ -6,7 +6,8 @@
              utility:ViewModelLocator.AutoWireViewModel="True"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:DataType="viewmodels:GastosViajeViewModel"
-             x:Class="App.Views.GastosViajePage">
+             x:Class="App.Views.GastosViajePage"
+             Title="{Binding Title}">
     <ContentPage.Behaviors>
         <xct:EventToCommandBehavior EventName="Appearing" Command="{Binding AppearingCommand}"/>
     </ContentPage.Behaviors>

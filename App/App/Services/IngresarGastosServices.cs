@@ -38,38 +38,6 @@ namespace App.Services
             {
                 var error = ex.Message;
             }
-
-            //if (response.StatusCode == System.Net.HttpStatusCode.OK)
-            //{
-            //    await Application.Current.MainPage.DisplayAlert("Mensaje","Gastos guardados con exito","Aceptar");
-            //}
-            //else
-            //{
-            //    await Application.Current.MainPage.DisplayAlert("Error", "Gastos No Guardados", "Aceptar");
-            //}
         }
-
-
-        //Task<GastosViaje> IIngresarGastosServices.PostGastosViajeAsync(GastoDto gastoDto)
-        //{
-        //    throw new NotImplementedException();
-        //}
-        //public async Task<List<GastosViaje>> PostGastosViajeAsync()
-        //{
-        //    var Gastos = new List<GastosViaje>();
-        //    try
-        //    {
-        //        var response = await _IngresarGastosServicesApi.PostGastosViajeAsync();
-        //        Gastos = response.ToList();
-        //        return Gastos;
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //        var error = ex.Message;
-        //    }
-        //    return Gastos;
-        //}
     }
 }

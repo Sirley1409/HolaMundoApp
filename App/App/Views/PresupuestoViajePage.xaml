@@ -9,7 +9,8 @@
              xmlns:viewmodels="clr-namespace:App.ViewModels" 
              x:DataType="viewmodels:PresupuestoViajeViewModel"
              x:Class="App.Views.PresupuestoViajePage"
-             Padding="10,10">
+             Padding="10,10"
+             Title="{Binding Title}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="GastosViajeDefaultTemplate" x:DataType="models:GastosViaje">
@@ -49,10 +50,10 @@
                         </Grid>
                     </CollectionView.Header>
                 </CollectionView>
-                <Button VerticalOptions="Center" 
-                         Text="Eliminar" Command="{Binding LoginCommand}"
+                <!--<Button VerticalOptions="Center" 
+                         Text="Eliminar" Command="{Binding EliminarCommand}"
                          Style="{StaticResource Botones}"
-                />
+                />-->
                 <!--<Label Text="Presupuesto"
                         VerticalOptions="Center" 
                         HorizontalOptions="Center"
